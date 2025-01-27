@@ -4,7 +4,42 @@
 
 ## 폴더 구조
 
-작성 예정
+```
+public/
+├── fonts/                # 폰트 파일
+├── icons/                # 아이콘 (svg)
+├── images/                # 이미지 파일 (jpg, png, svg...)
+src/
+├── app/
+│   ├── layout.tsx/     # 공통 레이아웃
+│   ├── page.tsx/       # 페이지
+│   └── (auth)          # 인증 관련 라우트 그룹
+│   │   ├── sign-up/    # 회원가입 페이지
+│   └── ...
+├── features/           # 주요 기능 단위
+│   ├── search/         # 커뮤니티 검색 기능
+│   │   ├── ui/         # 검색 관련 UI 컴포넌트
+│   │   ├── services/   # API 호출, 상태관리, 비즈니스 로직
+│   │   ├── lib/        # 유틸 함수 및 커스텀 훅
+│   │   └── types/      # 로컬 타입 정의
+│   │   └── consts/     # 로컬 상수 정의
+│   ├── auth/           # 인증 기능
+│   └── ...
+├── shared/             # 재사용 가능한 전역 리소스
+│   ├── components/     # 공용 컴포넌트 (Button, Modal 등)
+│   ├── config/         # 환경 설정 및 전역 상수
+│   ├── lib/            # 공용 유틸함수 및 커스텀 훅
+│   │   └── utils/      # 유틸함수
+│   │   └── hooks/      # 커스텀 훅
+|   ├── styles/         # 전역 스타일
+│   ├── types/          # 전역 타입 정의
+└── widgets/            # 독립적인 UI 블록
+    ├── emotion-stats/  # 감정 통계 위젯
+    ├── diary-overview/ # 일기 전체보기 위젯
+    └── ...
+
+
+```
 
 <br>
 
