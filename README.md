@@ -125,6 +125,22 @@ Layer는 최상위 디렉토리이자 서비스 분해의 첫 번째 단계
 - 마음읽기 페이지에서 일기 내용을 보여주는 좌측의 `DiaryConent` 위젯
 - 마음읽기 내용을 보여주는 우측의 `EmotionInsight` 위젯
 
+```
+// widgets/Navbar.tsx
+import { LoginForm } from "@/features/auth/ui/LoginForm";
+import { ProfileMenu } from "@/features/profile/ui/ProfileMenu";
+
+export function Navbar() {
+  return (
+    <nav>
+      <h1>로고</h1>
+      <LoginForm />
+      <ProfileMenu />
+    </nav>
+  );
+}
+```
+
 <br>
 
 ### `features/ui`
@@ -138,6 +154,24 @@ Layer는 최상위 디렉토리이자 서비스 분해의 첫 번째 단계
 **예시**
 
 - `LoginForm`, `DiaryCard`
+
+```
+// features/auth/ui/LoginForm.tsx
+import { useAuth } from "../model/useAuth";
+
+export function LoginForm() {
+  const { login, isLoading } = useAuth();
+
+  return (
+    <form onSubmit={login}>
+      <input type="email" placeholder="이메일" />
+      <input type="password" placeholder="비밀번호" />
+      <button type="submit" disabled={isLoading}>로그인</button>
+    </form>
+  );
+}
+
+```
 
 <br>
 
@@ -167,6 +201,26 @@ Layer는 최상위 디렉토리이자 서비스 분해의 첫 번째 단계
 | **widgets**           | 여러 컴포넌트를 조합한 독립적인 UI 블록 | 특정 도메인 또는 페이지 섹션 | 높은 레벨 |
 | **features/ui**       | 특정 Feature에 종속된 UI 컴포넌트       | Feature 내부                 | 중간      |
 | **shared/components** | 전역적으로 재사용 가능한 기본 UI 요소   | 앱 전체                      | 가장 낮음 |
+
+<br>
+
+> `features/ui` vs `widgets`
+
+| 구분                   | `features/ui`             | `widgets`                       |
+| ---------------------- | ------------------------- | ------------------------------- |
+| **역할**               | 특정 기능의 일부 UI       | 여러 기능을 조합한 UI 구성 요소 |
+| **재사용성**           | 특정 기능 내에서만 사용   | 여러 페이지에서 재사용 가능     |
+| **비즈니스 로직 포함** | 포함될 수 있음            | 포함하지 않음                   |
+| **상태 관리**          | 내부적으로 상태 관리 가능 | 상태를 직접 관리하지 않음       |
+| **예제**               | `LoginForm.tsx`           | `Navbar.tsx`                    |
+
+<br>
+
+**결론**
+
+- 특정 기능(Feature)의 일부로 UI가 필요하면 `features/ui`에 작성
+
+- 여러 기능을 조합해서 페이지의 큰 블록을 만들려면 `widgets`에 작성
 
 <br>
 <br>
