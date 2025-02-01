@@ -6,36 +6,61 @@
 
 ```
 public/
-├── fonts/                # 폰트 파일
-├── icons/                # 아이콘 (svg)
-├── images/                # 이미지 파일 (jpg, png, svg...)
+├── fonts/                    # 폰트 파일
+├── icons/                    # 아이콘 (svg)
+├── images/                   # 이미지 파일 (jpg, png, svg...)
+
 src/
 ├── app/
-│   ├── layout.tsx/     # 공통 레이아웃
-│   ├── page.tsx/       # 페이지
-│   └── (auth)          # 인증 관련 라우트 그룹
-│   │   ├── sign-up/    # 회원가입 페이지
+│   ├── (centeredFrame)       # 중앙 레이아웃 라우트 그룹
+│   │   ├── emotion-guide/    # 감정 설명서
+│   │   ├── keyword-select/   # 키워드 선택
+│   │   ├── sign-in/          # 로그인
+│   │   ├── sign-up/          # 회원가입
+│   │   └── layout.tsx        # 레이아웃
+│   ├── (main)                # 메인 페이지
+│   ├── calendar              # 달력 페이지
+│   │   ├── @diary/           # 일기 slot
+│   │   ├── layout.tsx        # 달력 전체 레이아웃
+│   │   └── page.tsx          # 달력 slot
+│   ├── chat/                 # 감정 챗봇
+│   ├── community/            # 커뮤니티
+│   ├── diary/[id]/           # 특정 일기 상세 페이지
+│   │   ├── @panel/           # 덧말, 마음 읽기 slot
+│   │   ├── layout.tsx        # 일기보기 전체 레이아웃
+│   │   └── page.tsx          # 일기 콘텐츠 slot
+│   ├── drawer/               # 서랍 페이지
+│   ├── moment-log/           # 감정 관리서 페이지
+│   ├── overview/             # 통계 페이지
+│   ├── write/                # 일기 작성 페이지
+│   └── layout                # RootLayout
+
+├── features/                 # 주요 기능 단위
+│   ├── search/               # 커뮤니티 검색 기능
+│   │   ├── ui/               # 검색 관련 UI 컴포넌트
+│   │   ├── services/         # API 호출, 상태관리, 비즈니스 로직
+│   │   ├── lib/              # 유틸 함수 및 커스텀 훅
+│   │   ├── types/            # 로컬 타입 정의
+│   │   └── consts/           # 로컬 상수 정의
+│   ├── auth/                 # 인증 기능
 │   └── ...
-├── features/           # 주요 기능 단위
-│   ├── search/         # 커뮤니티 검색 기능
-│   │   ├── ui/         # 검색 관련 UI 컴포넌트
-│   │   ├── services/   # API 호출, 상태관리, 비즈니스 로직
-│   │   ├── lib/        # 유틸 함수 및 커스텀 훅
-│   │   └── types/      # 로컬 타입 정의
-│   │   └── consts/     # 로컬 상수 정의
-│   ├── auth/           # 인증 기능
-│   └── ...
-├── shared/             # 재사용 가능한 전역 리소스
-│   ├── components/     # 공용 컴포넌트 (Button, Modal 등)
-│   ├── config/         # 환경 설정 및 전역 상수
-│   ├── lib/            # 공용 유틸함수 및 커스텀 훅
-│   │   └── utils/      # 유틸함수
-│   │   └── hooks/      # 커스텀 훅
-|   ├── styles/         # 전역 스타일
-│   ├── types/          # 전역 타입 정의
-└── widgets/            # 독립적인 UI 블록
-    ├── emotion-stats/  # 감정 통계 위젯
-    ├── diary-overview/ # 일기 전체보기 위젯
+
+├── shared/                   # 재사용 가능한 전역 리소스
+│   ├── components/           # 공용 컴포넌트 (Button, Modal 등)
+│   ├── config/               # 환경 설정 및 전역 상수
+│   ├── lib/                  # 공용 유틸함수 및 커스텀 훅
+│   │   ├── utils/            # 유틸함수
+│   │   └── hooks/            # 커스텀 훅
+|   ├── styles/               # 전역 스타일
+│   │   ├── base/             # 기본 스타일 설정
+│   │   ├── mixins/           # Mixin (재사용 가능한 스타일 함수)
+│   │   ├── variables/        # 스타일 변수 관리 (폰트, 컬러..)
+│   │   └── styles.scss/      # import 허브
+│   ├── types/                # 전역 타입 정의
+
+└── widgets/                  # 독립적인 UI 블록
+    ├── emotion-stats/        # 감정 통계 위젯
+    ├── diary-overview/       # 일기 전체보기 위젯
     └── ...
 
 
@@ -131,8 +156,9 @@ Layer는 최상위 디렉토리이자 서비스 분해의 첫 번째 단계
 - `Button`, `Modal`, `InputField`
 
 <br>
+<br>
 
-> Layer 단위로 비교
+> Layer 단위 비교
 
 | **폴더**              | **역할**                                | **스코프**                   | **레벨**  |
 | --------------------- | --------------------------------------- | ---------------------------- | --------- |
