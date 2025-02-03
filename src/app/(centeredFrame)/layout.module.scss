@@ -1,6 +1,4 @@
 .container {
-  // @include flex(center, center);
-  position: relative;
   height: calc(100vh - 64px); // 64px은 GNB의 높이
   background-color: $background;
 }

@@ -76,14 +76,19 @@ src/
 ### 컴포넌트 파일명
 
 - **PascalCase**: `Modal.tsx`
+  - 단, 페이지 파일은 Next app routing 규칙에 따라 소문자로만 명명: `page.tsx`
 
 ### 파일 내 변수 및 함수
 
 - **camelCase**: `userProfile`
 
+### 커스텀 훅
+
+- **use**로 시작: `useToggle`
+
 ### 상수
 
-- **SCREAM_SNAKE_CASE**: `USER_AUTH`
+- **SCREAMING_SNAKE_CASE**: `USER_AUTH`
 
 ### 타입 파일
 
