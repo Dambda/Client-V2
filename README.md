@@ -40,18 +40,19 @@ src/
 │   │   ├── ui/               # 검색 관련 UI 컴포넌트
 │   │   ├── services/         # API 호출, 상태관리, 비즈니스 로직
 │   │   ├── lib/              # 유틸 함수 및 커스텀 훅
-│   │   ├── types/            # 로컬 타입 정의
+│   │   ├── search.types.ts   # 로컬 타입 정의
 │   │   └── consts/           # 로컬 상수 정의
 │   ├── auth/                 # 인증 기능
 │   └── ...
 
 ├── shared/                   # 재사용 가능한 전역 리소스
 │   ├── components/           # 공용 컴포넌트 (Button, Modal 등)
-│   ├── config/               # 환경 설정 및 전역 상수
+│   ├── config/               # 환경 설정
+│   ├── consts/               # 전역 상수
 │   ├── lib/                  # 공용 유틸함수 및 커스텀 훅
 │   │   ├── utils/            # 유틸함수
 │   │   └── hooks/            # 커스텀 훅
-|   ├── styles/               # 전역 스타일
+|   ├── styles/               # 전역 스타일 관리
 │   │   ├── base/             # 기본 스타일 설정
 │   │   ├── mixins/           # Mixin (재사용 가능한 스타일 함수)
 │   │   ├── variables/        # 스타일 변수 관리 (폰트, 컬러..)
@@ -66,6 +67,31 @@ src/
 
 ```
 
+## 네이밍 컨벤션
+
+### 폴더명 및 URL
+
+- **kebab-case**: `moment-log`, `dambda.me/sign-in`
+
+### 컴포넌트 파일명
+
+- **PascalCase**: `Modal.tsx`
+
+### 파일 내 변수 및 함수
+
+- **camelCase**: `userProfile`
+
+### 상수
+
+- **SCREAM_SNAKE_CASE**: `USER_AUTH`
+
+### 타입 파일
+
+- 파일명 끝에 **.types.ts**: `user.types.ts`
+  - 전역 타입은 `shared`에, 로컬 타입은 각 도메인 별로 관리
+  - 인터페이스는 **I** 접두사 사용: `IUser`
+
+<br>
 <br>
 
 ## Layers
@@ -192,7 +218,7 @@ export function LoginForm() {
 <br>
 <br>
 
-> Layer 단위 비교
+> Layer 단위로 관심사 분리
 
 | **폴더**              | **역할**                                | **스코프**                   | **레벨**  |
 | --------------------- | --------------------------------------- | ---------------------------- | --------- |
@@ -246,11 +272,25 @@ export function LoginForm() {
 - 해당 features에서 사용하는 데이터 구조와 타입
 
   ```
-  src/features/diary/types/
-  ├── diary.ts
+  src/features/diary/
+  ├── diary.types.ts  # 단일 타입
+  ```
+
+  ```
+  src/features/diary/types/  # 여러 타입
+  ├── diary.types.ts
+  ├── keyword.types.ts
   ```
 
 **`lib`**
+
+- 커스텀 훅 및 유틸 함수 관리
+- 특정 features 내부에서만 재사용 되는 함수나 로직 추상화
+
+  ```
+  src/features/diary/lib/
+  ├── useToggle.ts
+  ```
 
 - 커스텀 훅 및 유틸 함수 관리
 - 특정 features 내부에서만 재사용 되는 함수나 로직 추상화
