@@ -4,18 +4,19 @@
   box-sizing: border-box;
   margin: 0;
 
-  font-family: var(--font-noto-sans-kr);
+  font-family: $font-noto;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 
 html {
-  font-family: var(--font-noto-sans-kr);
-  /* font-size: $font-size-16; */
+  font-family: $font-noto;
+  font-size: 16px;
 }
 
 body {
-  font-family: var(--font-noto-sans-kr);
+  font-family: $font-noto;
+  background-color: $background;
   color: $primary;
 }
 
