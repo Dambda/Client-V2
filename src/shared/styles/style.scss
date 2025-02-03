@@ -2,8 +2,9 @@
 @forward "./base/fonts";
 
 // mixins
-@forward "./mixins/flexbox";
+@forward "./mixins/box-shadow";
 @forward "./mixins/text-style";
+@forward "./mixins/flexbox";
 
 // variables
 @forward "./variables/colors";

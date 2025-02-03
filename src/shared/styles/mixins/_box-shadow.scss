@@ -1,0 +1,13 @@
+@mixin shadow($shadow-style: smooth) {
+  @if $shadow-style == soft {
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.06);
+  } @else if $shadow-style == smooth {
+    box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.04);
+  } @else if $shadow-style == light {
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.06);
+  } @else if $shadow-style == medium {
+    box-shadow: 2px 3px 15px 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+//사용 예시 : @include: shadow(light)
