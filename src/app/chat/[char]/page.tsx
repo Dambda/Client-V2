@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useParams } from "next/navigation";
+import { useParams } from 'next/navigation';
 
 export default function Chat() {
-  const { char } = useParams();
+    const { char } = useParams();
 
-  return <div>Chat Character : {char}</div>;
+    return <div>Chat Character : {char}</div>;
 }

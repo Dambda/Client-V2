@@ -1,19 +1,19 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export default function ChatLayout({
-  list,
-  children,
-  info,
+    list,
+    children,
+    info,
 }: {
-  list: ReactNode;
-  children: ReactNode;
-  info: ReactNode;
+    list: ReactNode;
+    children: ReactNode;
+    info: ReactNode;
 }) {
-  return (
-    <div>
-      {list}
-      {children}
-      {info}
-    </div>
-  );
+    return (
+        <div>
+            {list}
+            {children}
+            {info}
+        </div>
+    );
 }

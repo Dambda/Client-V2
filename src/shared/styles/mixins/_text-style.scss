@@ -1,18 +1,18 @@
-@use "../variables/typography" as *;
+@use '../variables/typography' as *;
 
 @mixin text-style($font-family, $weight: 400, $size: 16px, $lineHeight: 1.5) {
-  font-family: $font-family;
-  font-weight: $weight;
-  font-size: $size;
-  line-height: $lineHeight;
+    font-family: $font-family;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $lineHeight;
 }
 
 @mixin noto($weight: 400, $size: 16px, $lineHeight: 1.5) {
-  @include text-style($font-noto, $weight, $size, $lineHeight);
+    @include text-style($font-noto, $weight, $size, $lineHeight);
 }
 
 @mixin arita($weight: 500, $size: 24px, $lineHeight: 1.5) {
-  @include text-style($font-noto, $weight, $size, $lineHeight);
+    @include text-style($font-noto, $weight, $size, $lineHeight);
 }
 
 // 사용 예시

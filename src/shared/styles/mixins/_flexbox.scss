@@ -1,33 +1,33 @@
 $flex-map: (
-  start: flex-start,
-  end: flex-end,
-  between: space-between,
-  around: space-around,
-  stretch: stretch,
-  center: center,
+    start: flex-start,
+    end: flex-end,
+    between: space-between,
+    around: space-around,
+    stretch: stretch,
+    center: center,
 );
 
 @function _get-flex-value($key) {
-  @return map-get($flex-map, $key);
+    @return map-get($flex-map, $key);
 }
 
 // flexbox mixin 모음
 // 사용 예시 : @include flexbox(start, around);
 @mixin flex($justify-content: center, $align-items: center) {
-  display: flex;
-  justify-content: _get-flex-value($justify-content);
-  align-items: _get-flex-value($align-items);
+    display: flex;
+    justify-content: _get-flex-value($justify-content);
+    align-items: _get-flex-value($align-items);
 }
 
 @mixin inline-flex($justify-content: center, $align-items: center) {
-  display: inline-flex;
-  justify-content: _get-flex-value($justify-content);
-  align-items: _get-flex-value($align-items);
+    display: inline-flex;
+    justify-content: _get-flex-value($justify-content);
+    align-items: _get-flex-value($align-items);
 }
 
 @mixin column-flex($justify-content: center, $align-items: center) {
-  display: flex;
-  flex-direction: column;
-  justify-content: _get-flex-value($justify-content);
-  align-items: _get-flex-value($align-items);
+    display: flex;
+    flex-direction: column;
+    justify-content: _get-flex-value($justify-content);
+    align-items: _get-flex-value($align-items);
 }

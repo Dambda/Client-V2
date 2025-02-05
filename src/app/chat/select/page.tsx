@@ -1,3 +1,3 @@
 export default function SelectPage() {
-  return <div>감정 선택</div>;
+    return <div>감정 선택</div>;
 }

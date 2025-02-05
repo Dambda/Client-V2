@@ -1,6 +1,6 @@
 .test {
-  width: 100dvw;
-  height: 64px;
-  background-color: $background-sub;
-  @include noto(500, 16px, 1.5);
+    width: 100dvw;
+    height: 64px;
+    background-color: $background-sub;
+    @include noto(500, 16px, 1.5);
 }

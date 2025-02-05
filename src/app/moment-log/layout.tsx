@@ -1,16 +1,16 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react';
 
 export default function Layout({
-  children,
-  log,
+    children,
+    log,
 }: {
-  children: ReactNode;
-  log: ReactNode;
+    children: ReactNode;
+    log: ReactNode;
 }) {
-  return (
-    <div>
-      {children}
-      {log}
-    </div>
-  );
+    return (
+        <div>
+            {children}
+            {log}
+        </div>
+    );
 }

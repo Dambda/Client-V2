@@ -1,54 +1,54 @@
 // 기본 스타일 초기화
 
 * {
-  box-sizing: border-box;
-  margin: 0;
+    box-sizing: border-box;
+    margin: 0;
 
-  font-family: $font-noto;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+    font-family: $font-noto;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 }
 
 html {
-  font-family: $font-noto;
-  font-size: 16px;
+    font-family: $font-noto;
+    font-size: 16px;
 }
 
 body {
-  font-family: $font-noto;
-  background-color: $background;
-  color: $primary;
+    font-family: $font-noto;
+    background-color: $background;
+    color: $primary;
 }
 
 h1 {
-  margin: 0;
+    margin: 0;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 button,
 input,
 select,
 textarea {
-  background-color: transparent;
-  border: 0;
+    background-color: transparent;
+    border: 0;
 
-  &:focus {
-    outline: none;
-    box-shadow: none;
-  }
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
 }
 
 a,
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 ul,
 ol {
-  padding-left: 0;
-  list-style: none;
+    padding-left: 0;
+    list-style: none;
 }

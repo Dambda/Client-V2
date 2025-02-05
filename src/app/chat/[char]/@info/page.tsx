@@ -1,3 +1,3 @@
 export default function InfoPage() {
-  return <div>@CharacterInfoPage</div>;
+    return <div>@CharacterInfoPage</div>;
 }

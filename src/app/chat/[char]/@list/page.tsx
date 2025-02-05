@@ -1,3 +1,3 @@
 export default function ChatListPage() {
-  return <div>@ChatListPage</div>;
+    return <div>@ChatListPage</div>;
 }
