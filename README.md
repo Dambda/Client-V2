@@ -297,14 +297,6 @@ export function LoginForm() {
     ├── useToggle.ts
     ```
 
-- 커스텀 훅 및 유틸 함수 관리
-- 특정 features 내부에서만 재사용 되는 함수나 로직 추상화
-
-    ```
-    src/features/diary/lib/
-    ├── useToggle.ts
-    ```
-
 **`services`**
 
 - API 호출 및 데이터 가공
