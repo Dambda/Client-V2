@@ -1,0 +1,67 @@
+.test {
+    background-color: #ffffff;
+    padding-top: 35px;
+    padding-left: 80px;
+    padding-right: 80px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
+.title {
+    @include noto(300, 32px, 1.5);
+}
+.hrContainer {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #bfbfbf;
+    @include noto(400, 14px, 1.5);
+}
+
+.leftHr,
+.rightHr {
+    height: 1px;
+    border: none;
+    background-color: #ececec;
+}
+
+.leftHr {
+    flex: 1; // 남은 공간
+}
+
+.rightHr {
+    width: 50px; // 오른쪽 hr 너비만 고정
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    @include noto(300, 18px, 2);
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 543px;
+    height: 240px;
+    border-radius: 8px;
+    background-color: brown;
+}
+
+.bottomHr {
+    height: 1px;
+    margin-top: 55px;
+    background-color: #ececec;
+    border: none;
+}
+
+.bottomContainer {
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    @include noto(400, 12px, 1.5);
+}
