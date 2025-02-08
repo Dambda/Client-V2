@@ -1,5 +1,6 @@
-import Image, { StaticImageData } from 'next/image';
-import s from './diary-view.module.scss';
+import { StaticImageData } from 'next/image';
+import DefaultCoverImg from './default/default-coverImg';
+import DefaultDiary from './default/dafultDiary';
 
 type DiaryViewMode = 'calendar' | 'feature' | 'default';
 
@@ -29,46 +30,22 @@ export default function DiaryView({
         default:
             if (coverImg) {
                 return (
-                    <div>
-                        <div>
-                            <Image src={coverImg} alt="커버" />
-                            <div>
-                                <h3>{title}</h3>
-                                <span>{date}</span>
-                            </div>
-                        </div>
-                        <div>
-                            <span>{content}</span>
-                        </div>
-                        <div className={s.bottomContainer}></div>
-                    </div>
+                    <DefaultCoverImg
+                        coverImg={coverImg}
+                        title={title}
+                        date={date}
+                        content={content}
+                    ></DefaultCoverImg>
+                );
+            } else {
+                return (
+                    <DefaultDiary
+                        title={title}
+                        date={date}
+                        content={content}
+                        contentImg={contentImg}
+                    ></DefaultDiary>
                 );
             }
-            return (
-                <div className={s.container}>
-                    <h3 className={s.title}>{title}</h3>
-                    <div className={s.hrContainer}>
-                        <hr className={s.leftHr} />
-                        <span>{date}</span>
-                        <hr className={s.rightHr} />
-                    </div>
-                    <div className={s.contentContainer}>
-                        <span className={s.content}>{content}</span>
-                        {contentImg && (
-                            <Image
-                                className={s.image}
-                                src={contentImg}
-                                alt="커버사진"
-                                width={500}
-                                height={300}
-                            />
-                        )}
-                    </div>
-                    <hr className={s.bottomHr} />
-                    <div className={s.bottomContainer}>
-                        <span>{date}</span>
-                    </div>
-                </div>
-            );
     }
 }
