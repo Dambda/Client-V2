@@ -25,7 +25,14 @@ export default function DiaryView({
     console.log(coverImg);
     switch (mode) {
         case 'calendar':
-            return <DiaryCalendar></DiaryCalendar>;
+            return (
+                <DiaryCalendar
+                    coverImg={coverImg}
+                    title={title}
+                    content={content}
+                    contentImg={contentImg}
+                ></DiaryCalendar>
+            );
         default:
             if (coverImg) {
                 return (
