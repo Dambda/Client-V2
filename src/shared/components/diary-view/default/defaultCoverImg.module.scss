@@ -1,18 +1,32 @@
 .container {
-    border-top-right-radius: 24px;
-    border-top-left-radius: 24px;
     background-color: #ffffff;
     min-height: 736px;
     display: flex;
     flex-direction: column;
+    &.default {
+        width: 1080px;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+    }
+    &.feature {
+        width: 800px;
+        border-top-right-radius: 24px;
+        border-top-left-radius: 0px;
+    }
 }
 .coverSection {
     position: relative;
     height: 240px;
     flex-shrink: 0;
     background-color: brown;
-    border-top-right-radius: 24px;
-    border-top-left-radius: 24px;
+    &.default {
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+    }
+    &.feature {
+        border-top-right-radius: 24px;
+        border-top-left-radius: 0px;
+    }
     overflow: hidden;
 }
 .overlay {

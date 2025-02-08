@@ -1,6 +1,7 @@
 import { StaticImageData } from 'next/image';
 import DefaultCoverImg from './default/default-coverImg';
 import DefaultDiary from './default/dafultDiary';
+import DiaryCalendar from './calendar/diary-calendar';
 
 type DiaryViewMode = 'calendar' | 'feature' | 'default';
 
@@ -24,13 +25,12 @@ export default function DiaryView({
     console.log(coverImg);
     switch (mode) {
         case 'calendar':
-            return <div>달력 페이지</div>;
-        case 'feature':
-            return <div>덧말이나 감정보기... 등 기능</div>;
+            return <DiaryCalendar></DiaryCalendar>;
         default:
             if (coverImg) {
                 return (
                     <DefaultCoverImg
+                        mode={mode}
                         coverImg={coverImg}
                         title={title}
                         date={date}
@@ -40,6 +40,7 @@ export default function DiaryView({
             } else {
                 return (
                     <DefaultDiary
+                        mode={mode}
                         title={title}
                         date={date}
                         content={content}

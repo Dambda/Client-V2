@@ -3,9 +3,17 @@
     padding-top: 35px;
     padding-left: 80px;
     padding-right: 80px;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-    height: 736px;
+    &.default {
+        width: 1080px;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+    }
+    &.feature {
+        width: 800px;
+        border-top-right-radius: 24px;
+        border-top-left-radius: 0px;
+    }
+    min-height: 736px;
 }
 .title {
     @include noto(300, 32px, 1.5);

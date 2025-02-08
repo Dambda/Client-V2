@@ -2,6 +2,7 @@ import Image, { StaticImageData } from 'next/image';
 import s from './diary-view.module.scss';
 
 interface DefaultDiaryProps {
+    mode: string;
     title: string;
     date: string;
     content: string;
@@ -9,13 +10,14 @@ interface DefaultDiaryProps {
 }
 
 export default function DefaultDiary({
+    mode,
     title,
     date,
     content,
     contentImg,
 }: DefaultDiaryProps) {
     return (
-        <div className={s.container}>
+        <div className={`${s.container} ${s[mode]}`}>
             <h3 className={s.title}>{title}</h3>
             <div className={s.hrContainer}>
                 <hr className={s.leftHr} />
