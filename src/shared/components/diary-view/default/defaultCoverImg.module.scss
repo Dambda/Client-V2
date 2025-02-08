@@ -1,19 +1,71 @@
+.container {
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+    background-color: #ffffff;
+    min-height: 736px;
+    display: flex;
+    flex-direction: column;
+}
+.coverSection {
+    position: relative;
+    height: 240px;
+    flex-shrink: 0;
+    background-color: brown;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+    overflow: hidden;
+}
+.overlay {
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 80px 80px 35px;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.06);
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.title {
+    @include arita(500, 32px, 1.5);
+    color: #ffffff;
+}
+.date {
+    @include arita(400, 14px, 1.5);
+    color: #bfbfbf;
+    align-self: flex-end; // date만 오른쪽으로 정렬
+}
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .bottom {
     @include noto(300, 18px, 2);
+    flex: 1; // 남은 공간 모두 차지...
     margin-top: 35px;
     padding-left: 80px;
     padding-right: 80px;
     color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
 .bottomContainer {
     min-height: 66px;
     display: flex;
     align-items: center;
     @include noto(400, 12px, 1.5);
 }
+
 .bottomHr {
     height: 1px;
-    margin-top: 55px;
+    margin-top: 66px;
     background-color: #ececec;
     border: none;
 }

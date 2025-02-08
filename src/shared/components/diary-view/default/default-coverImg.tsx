@@ -15,20 +15,22 @@ export default function DefaultCoverImg({
     content,
 }: DefaultCoverImgProps) {
     return (
-        <div>
-            <div>
-                <Image src={coverImg} alt="커버" />
-                <div>
-                    <h3>{title}</h3>
-                    <span>{date}</span>
+        <div className={s.container}>
+            <div className={s.coverSection}>
+                <Image className={s.img} src={coverImg} alt="커버" />
+                <div className={s.overlay}>
+                    <h3 className={s.title}>{title}</h3>
+                    <span className={s.date}>{date}</span>
                 </div>
             </div>
             <div className={s.bottom}>
                 <div>
                     <span>{content}</span>
                 </div>
-                <hr className={s.bottomHr} />
-                <div className={s.bottomContainer}></div>
+                <div>
+                    <hr className={s.bottomHr} />
+                    <div className={s.bottomContainer}></div>
+                </div>
             </div>
         </div>
     );
