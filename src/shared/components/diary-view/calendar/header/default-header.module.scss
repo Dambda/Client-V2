@@ -1,0 +1,15 @@
+.container {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    .title {
+        @include noto(300, 28px, 1.5);
+        margin-bottom: 30px;
+    }
+    .hr {
+        height: 1px;
+        background-color: #dfdfdf;
+        border: none;
+    }
+    margin-bottom: 30px;
+}

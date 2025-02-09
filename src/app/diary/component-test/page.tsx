@@ -37,6 +37,7 @@ export default function DiaryComponentTest() {
                 date="01월 10일 오후 3:42"
                 contentImg={test1}
             ></DiaryView>
+            <br />
             <DiaryView
                 mode="calendar"
                 title="제목"
@@ -45,6 +46,7 @@ export default function DiaryComponentTest() {
                 coverImg={test1}
                 contentImg={test1}
             ></DiaryView>
+            <br />
             <DiaryView
                 mode="calendar"
                 title="제목"
