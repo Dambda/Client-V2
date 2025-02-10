@@ -24,7 +24,6 @@ src/
 │   │   ├── layout.tsx        # 달력 전체 레이아웃
 │   │   └── page.tsx          # 달력 slot
 │   ├── chat/                 # 감정 챗봇
-│   ├── community/            # 커뮤니티
 │   ├── diary/[id]/           # 특정 일기 상세 페이지
 │   │   ├── @panel/           # 덧말, 마음 읽기 slot
 │   │   ├── layout.tsx        # 일기보기 전체 레이아웃
