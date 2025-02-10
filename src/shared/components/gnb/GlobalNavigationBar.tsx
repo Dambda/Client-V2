@@ -3,7 +3,7 @@ import s from "./gnb.module.scss";
 
 export default function GlobalNavigationBar() {
   return (
-    <header className={styles.test}>
+    <header className={s.test}>
       <Link href="/">GlobalNavigationBar</Link>
     </header>
   );
