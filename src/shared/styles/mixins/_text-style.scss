@@ -12,7 +12,7 @@
 }
 
 @mixin arita($weight: 500, $size: 24px, $lineHeight: 1.5) {
-    @include text-style($font-noto, $weight, $size, $lineHeight);
+    @include text-style($font-arita, $weight, $size, $lineHeight);
 }
 
 // 사용 예시
