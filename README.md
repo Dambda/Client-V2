@@ -97,6 +97,32 @@ src/
     - 전역 타입은 `shared`에, 로컬 타입은 각 도메인 별로 관리
     - 인터페이스는 **I** 접두사 사용: `IUser`
 
+### SCSS 파일명
+
+- 컴포넌트 스타일 (**PascalCase**)
+
+    - 컴포넌트와 같은 이름의 module.scss 확장자 사용
+
+    ```
+    shared/components/button
+    ├── Button.tsx
+    ├── Button.module.scss
+    ```
+
+- 페이지 스타일 (**kebab-case**)
+    ```
+    app/drawer
+    ├── page.tsx
+    ├── page.module.scss
+    ```
+- 전역 스타일 (**kebab-case**)
+    ```
+    shared/styles/
+    ├── _variables.scss
+    ├── _mixins.scss
+    ├── _globals.scss
+    ```
+
 <br>
 <br>
 
