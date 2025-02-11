@@ -15,14 +15,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
     children,
+    modal,
 }: Readonly<{
     children: React.ReactNode;
+    modal: React.ReactNode;
 }>) {
     return (
         <html lang="ko">
             <body className={`${noto_sans_kr.className} `}>
                 <GlobalNavigationBar />
-                <main>{children}</main>
+                <main>
+                    {children}
+                    {modal}
+                </main>
             </body>
         </html>
     );
