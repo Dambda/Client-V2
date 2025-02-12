@@ -3,7 +3,7 @@ import DefaultCoverImg from './default/default-coverImg';
 import DefaultDiary from './default/dafultDiary';
 import DiaryCalendar from './calendar/diary-calendar';
 
-type DiaryViewMode = 'calendar' | 'feature' | 'default';
+export type DiaryViewMode = 'calendar' | 'feature' | 'default';
 
 interface DiaryViewProps {
     mode: DiaryViewMode;
