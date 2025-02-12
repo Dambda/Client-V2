@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 $flex-map: (
     start: flex-start,
     end: flex-end,
@@ -8,7 +10,7 @@ $flex-map: (
 );
 
 @function _get-flex-value($key) {
-    @return map-get($flex-map, $key);
+    @return map.get($flex-map, $key);
 }
 
 // flexbox mixin 모음

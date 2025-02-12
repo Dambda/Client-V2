@@ -1,19 +1,32 @@
 @use '../variables/typography' as *;
 
-@mixin text-style($font-family, $weight: 400, $size: 16px, $lineHeight: 1.5) {
+@mixin text-style($font-family, $weight, $size, $lineHeight, $letterSpacing) {
     font-family: $font-family;
     font-weight: $weight;
     font-size: $size;
     line-height: $lineHeight;
+    letter-spacing: $letterSpacing;
 }
 
-@mixin noto($weight: 400, $size: 16px, $lineHeight: 1.5) {
-    @include text-style($font-noto, $weight, $size, $lineHeight);
+@mixin noto($weight: 400, $size: 16px, $lineHeight: 1.5, $letterSpacing: 0) {
+    @include text-style(
+        $font-noto,
+        $weight,
+        $size,
+        $lineHeight,
+        $letterSpacing
+    );
 }
 
-@mixin arita($weight: 500, $size: 24px, $lineHeight: 1.5) {
-    @include text-style($font-noto, $weight, $size, $lineHeight);
+@mixin arita($weight: 500, $size: 24px, $lineHeight: 1.5, $letterSpacing: 0) {
+    @include text-style(
+        $font-arita,
+        $weight,
+        $size,
+        $lineHeight,
+        $letterSpacing
+    );
 }
 
 // 사용 예시
-//  @include noto(500, 16px, 1.5);
+//  @include noto(500, 16px, 1.5, 0.04em);
