@@ -1,76 +1,88 @@
 .container {
+    min-height: 736px;
     background-color: #ffffff;
-    padding-top: 35px;
-    padding-left: 80px;
-    padding-right: 80px;
+    padding: {
+        top: 35px;
+        left: 80px;
+        right: 80px;
+    }
+
     &.default {
         width: 1080px;
-        border-top-left-radius: 24px;
-        border-top-right-radius: 24px;
+        border-top: {
+            left-radius: 24px;
+            right-radius: 24px;
+        }
     }
+
     &.feature {
         width: 800px;
-        border-top-right-radius: 24px;
-        border-top-left-radius: 0px;
+        border-top: {
+            left-radius: 0px;
+            right-radius: 24px;
+        }
     }
-    min-height: 736px;
-}
-.title {
-    @include noto(300, 32px, 1.5);
-}
-.hrContainer {
-    margin-top: 35px;
-    margin-bottom: 35px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    color: #bfbfbf;
-    @include noto(400, 14px, 1.5);
-}
 
-.leftHr,
-.rightHr {
-    height: 1px;
-    border: none;
-    background-color: #ececec;
-}
+    .title {
+        @include noto(300, 32px, 1.5);
+    }
 
-.leftHr {
-    flex: 1; // 남은 공간
-}
+    .hrContainer {
+        margin: {
+            top: 35px;
+            bottom: 35px;
+        }
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: #bfbfbf;
+        @include noto(400, 14px, 1.5);
 
-.rightHr {
-    width: 50px; // 오른쪽 hr 너비만 고정
-}
+        .leftHr,
+        .rightHr {
+            height: 1px;
+            border: none;
+            background-color: #ececec;
+        }
 
-.contentContainer {
-    display: flex;
-    flex-direction: column;
-}
+        .leftHr {
+            flex: 1;
+        }
 
-.content {
-    @include noto(300, 18px, 2);
-    color: #333333;
-    margin-bottom: 20px;
-}
+        .rightHr {
+            width: 50px;
+        }
+    }
 
-.image {
-    width: 543px;
-    height: 240px;
-    border-radius: 8px;
-    background-color: brown;
-}
+    .contentContainer {
+        display: flex;
+        flex-direction: column;
 
-.bottomHr {
-    height: 1px;
-    margin-top: 55px;
-    background-color: #ececec;
-    border: none;
-}
+        .content {
+            @include noto(300, 18px, 2);
+            color: #333333;
+            margin-bottom: 20px;
+        }
 
-.bottomContainer {
-    min-height: 66px;
-    display: flex;
-    align-items: center;
-    @include noto(400, 12px, 1.5);
+        .image {
+            width: 543px;
+            height: 240px;
+            border-radius: 8px;
+            background-color: brown;
+        }
+    }
+
+    .bottomHr {
+        height: 1px;
+        margin-top: 55px;
+        background-color: #ececec;
+        border: none;
+    }
+
+    .bottomContainer {
+        min-height: 66px;
+        display: flex;
+        align-items: center;
+        @include noto(400, 12px, 1.5);
+    }
 }
