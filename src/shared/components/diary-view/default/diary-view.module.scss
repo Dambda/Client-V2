@@ -6,6 +6,8 @@
         left: 80px;
         right: 80px;
     }
+    display: flex;
+    flex-direction: column;
 
     &.default {
         width: 1080px;
@@ -72,17 +74,24 @@
         }
     }
 
-    .bottomHr {
-        height: 1px;
-        margin-top: 55px;
-        background-color: #ececec;
-        border: none;
-    }
-
-    .bottomContainer {
-        min-height: 66px;
+    .bottomSection {
+        flex: 1; // 남은 부분 차지(contnetContainer의 크기가 작더라도 하단 hr의 위치는 고정하고 contentContainer의 바로 밑 부분부터 보이지 않는 bottomSection 존재)
         display: flex;
-        align-items: center;
-        @include noto(400, 12px, 1.5);
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .bottomHr {
+            height: 1px;
+            margin-top: 55px;
+            background-color: #ececec;
+            border: none;
+        }
+
+        .bottomContainer {
+            min-height: 66px;
+            display: flex;
+            align-items: center;
+            @include noto(400, 12px, 1.5);
+        }
     }
 }

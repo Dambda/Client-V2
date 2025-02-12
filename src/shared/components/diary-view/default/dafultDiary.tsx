@@ -36,9 +36,11 @@ export default function DefaultDiary({
                     />
                 )}
             </div>
-            <hr className={s.bottomHr} />
-            <div className={s.bottomContainer}>
-                <span>{date}</span>
+            <div className={s.bottomSection}>
+                <hr className={s.bottomHr} />
+                <div className={s.bottomContainer}>
+                    <span>{date}</span>
+                </div>
             </div>
         </div>
     );
