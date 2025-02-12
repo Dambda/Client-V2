@@ -1,0 +1,97 @@
+.container {
+    min-height: 736px;
+    background-color: #ffffff;
+    padding: {
+        top: 35px;
+        left: 80px;
+        right: 80px;
+    }
+    display: flex;
+    flex-direction: column;
+
+    &.default {
+        width: 1080px;
+        border-top: {
+            left-radius: 24px;
+            right-radius: 24px;
+        }
+    }
+
+    &.feature {
+        width: 800px;
+        border-top: {
+            left-radius: 0px;
+            right-radius: 24px;
+        }
+    }
+
+    .title {
+        @include noto(300, 32px, 1.5);
+    }
+
+    .hrContainer {
+        margin: {
+            top: 35px;
+            bottom: 35px;
+        }
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: #bfbfbf;
+        @include noto(400, 14px, 1.5);
+
+        .leftHr,
+        .rightHr {
+            height: 1px;
+            border: none;
+            background-color: #ececec;
+        }
+
+        .leftHr {
+            flex: 1;
+        }
+
+        .rightHr {
+            width: 50px;
+        }
+    }
+
+    .contentContainer {
+        display: flex;
+        flex-direction: column;
+
+        .content {
+            @include noto(300, 18px, 2);
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .image {
+            width: 543px;
+            height: 240px;
+            border-radius: 8px;
+            background-color: brown;
+        }
+    }
+
+    .bottomSection {
+        flex: 1; // 남은 부분 차지(contnetContainer의 크기가 작더라도 하단 hr의 위치는 고정하고 contentContainer의 바로 밑 부분부터 보이지 않는 bottomSection 존재)
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        .bottomHr {
+            height: 1px;
+            margin-top: 55px;
+            background-color: #ececec;
+            border: none;
+        }
+
+        .bottomContainer {
+            min-height: 66px;
+            display: flex;
+            align-items: center;
+            @include noto(400, 12px, 1.5);
+        }
+    }
+}
