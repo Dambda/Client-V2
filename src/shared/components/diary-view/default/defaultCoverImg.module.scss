@@ -75,30 +75,39 @@
     }
 
     .bottom {
-        flex: 1; // 남은 공간 모두 차지
+        flex: 1;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        margin-top: 35px;
         padding: {
             left: 80px;
             right: 80px;
         }
-        @include noto(300, 18px, 2);
-        color: #333333;
 
-        .bottomHr {
-            height: 1px;
-            margin-top: 66px;
-            background-color: #ececec;
-            border: none;
+        .contentSection {
+            @include noto(300, 18px, 2);
+            color: #333333;
+            margin-top: 35px;
         }
 
-        .bottomContainer {
-            min-height: 66px;
+        .bottomSection {
+            flex: 1;
             display: flex;
-            align-items: center;
-            @include noto(400, 12px, 1.5);
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .bottomHr {
+                height: 1px;
+                margin-top: 55px;
+                background-color: #ececec;
+                border: none;
+            }
+
+            .bottomContainer {
+                min-height: 66px;
+                display: flex;
+                align-items: center;
+                @include noto(400, 12px, 1.5);
+            }
         }
     }
 }

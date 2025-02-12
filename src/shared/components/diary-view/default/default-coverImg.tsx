@@ -26,12 +26,14 @@ export default function DefaultCoverImg({
                 </div>
             </div>
             <div className={s.bottom}>
-                <div>
+                <div className={s.contentSection}>
                     <span>{content}</span>
                 </div>
-                <div>
+                <div className={s.bottomSection}>
                     <hr className={s.bottomHr} />
-                    <div className={s.bottomContainer}></div>
+                    <div className={s.bottomContainer}>
+                        <span>{date}</span>
+                    </div>
                 </div>
             </div>
         </div>
