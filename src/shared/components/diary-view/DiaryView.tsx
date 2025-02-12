@@ -6,7 +6,7 @@ import DiaryCalendar from './calendar/diary-calendar';
 // 캘린더 페이지에서 볼 때 사용하는, 덧말 등의 기능을 할 때 사용하는, default로 컴포넌트의 Mode 타입 선언
 export type DiaryViewMode = 'calendar' | 'feature' | 'default';
 
-interface DiaryViewProps {
+interface IDiaryViewProps {
     mode: DiaryViewMode;
     title: string;
     content: string;
@@ -14,7 +14,15 @@ interface DiaryViewProps {
     contentImg?: string | StaticImageData;
     date: string;
 }
-
+/**
+ *
+ * @param mode 사용하는 용도에 따라서 calendar, feature, default로 맞춰서 입력
+ * @param title 일기의 제목
+ * @param content 일기 내용(텍스트)
+ * @param coverImg 커버 이미지 주소(optional이라 없으면 안 넣어도 됨)
+ * @param contentImg 일기의 내용에 들어갈 이미지(이미지 주소)
+ * @param date 일기 작성한 날짜
+ */
 export default function DiaryView({
     mode,
     title,
@@ -22,7 +30,7 @@ export default function DiaryView({
     coverImg,
     contentImg,
     date,
-}: DiaryViewProps) {
+}: IDiaryViewProps) {
     switch (
         mode // calendar일 때, 아닌 경우일 때로 case 분기
     ) {

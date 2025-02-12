@@ -3,7 +3,7 @@ import HeaderCover from './header/header-cover';
 import HeaderDeafult from './header/header-default';
 import s from './diary-calendar.module.scss';
 
-interface DiaryCalendarProps {
+interface IDiaryCalendarProps {
     title: string;
     content: string;
     coverImg?: string | StaticImageData;
@@ -15,7 +15,7 @@ export default function DiaryCalendar({
     content,
     contentImg,
     coverImg,
-}: DiaryCalendarProps) {
+}: IDiaryCalendarProps) {
     return (
         // calendier 컴포넌트에서는 내용 부분은 그대로 가져가고 헤더 부분을 coverImg의 여부로 분기하여 호출
         <div className={s.container}>

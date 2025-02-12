@@ -1,12 +1,12 @@
 import Image, { StaticImageData } from 'next/image';
 import s from './cover-header.module.scss';
 
-interface HeaderCoverProps {
+interface IHeaderCoverProps {
     coverImg: string | StaticImageData;
     title: string;
 }
 
-export default function HeaderCover({ coverImg, title }: HeaderCoverProps) {
+export default function HeaderCover({ coverImg, title }: IHeaderCoverProps) {
     return (
         <div className={s.coverSection}>
             <div className={s.overlay}>
