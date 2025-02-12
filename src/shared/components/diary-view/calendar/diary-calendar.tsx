@@ -19,9 +19,9 @@ export default function DiaryCalendar({
     return (
         <div className={s.container}>
             {coverImg ? (
-                <HeaderCover coverImg={coverImg} title={title}></HeaderCover>
+                <HeaderCover coverImg={coverImg} title={title} />
             ) : (
-                <HeaderDeafult title={title}></HeaderDeafult>
+                <HeaderDeafult title={title} />
             )}
             <div className={s.contentContainer}>
                 <span className={s.content}>{content}</span>

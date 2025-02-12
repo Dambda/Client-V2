@@ -31,7 +31,7 @@ export default function DiaryView({
                     title={title}
                     content={content}
                     contentImg={contentImg}
-                ></DiaryCalendar>
+                />
             );
         default:
             if (coverImg) {
@@ -42,7 +42,7 @@ export default function DiaryView({
                         title={title}
                         date={date}
                         content={content}
-                    ></DefaultCoverImg>
+                    />
                 );
             } else {
                 return (
@@ -52,7 +52,7 @@ export default function DiaryView({
                         date={date}
                         content={content}
                         contentImg={contentImg}
-                    ></DefaultDiary>
+                    />
                 );
             }
     }
