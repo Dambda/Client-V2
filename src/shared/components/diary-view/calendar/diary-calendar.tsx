@@ -17,6 +17,7 @@ export default function DiaryCalendar({
     coverImg,
 }: DiaryCalendarProps) {
     return (
+        // calendier 컴포넌트에서는 내용 부분은 그대로 가져가고 헤더 부분을 coverImg의 여부로 분기하여 호출
         <div className={s.container}>
             {coverImg ? (
                 <HeaderCover coverImg={coverImg} title={title} />
