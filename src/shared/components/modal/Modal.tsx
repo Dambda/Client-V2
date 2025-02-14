@@ -37,14 +37,10 @@ export function Modal({
                 handleOuterTouchClose();
             }}
             role="presentation"
-            onKeyUp={() => {
-                handleOuterTouchClose();
-            }}
         >
             <div
                 className={S.modalContent}
                 role="dialog"
-                aria-modal="true"
                 onClick={(e) => e.stopPropagation()}
             >
                 {modalConfig.outerTouchClose && (
