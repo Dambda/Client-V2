@@ -1,4 +1,4 @@
-import JoyEmblem from './joy-emblem.svg';
+import JoyEmblem from '@public/icons/emblem/joy-emblem.svg';
 
 export default function TestPage() {
     return (
