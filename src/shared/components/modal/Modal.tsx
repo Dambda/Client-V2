@@ -43,8 +43,9 @@ export function Modal({
         >
             <div
                 className={S.modalContent}
-                role="alertdialog"
+                role="dialog"
                 aria-modal="true"
+                onClick={(e) => e.stopPropagation()}
             >
                 {modalConfig.outerTouchClose && (
                     <button
