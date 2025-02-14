@@ -40,7 +40,7 @@ export function Modal({
         >
             <div
                 className={S.modalContent}
-                role="dialog"
+                role="presentation"
                 onClick={(e) => e.stopPropagation()}
             >
                 {modalConfig.outerTouchClose && (
