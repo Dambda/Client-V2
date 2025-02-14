@@ -78,9 +78,9 @@ src/
 - **PascalCase**: `Modal.tsx`
     - 단, 페이지 파일은 Next app routing 규칙에 따라 소문자로만 명명: `page.tsx`
 
-### 파일 내 변수 및 함수
+### 변수 및 함수, className
 
-- **camelCase**: `userProfile`
+- **camelCase**: `userProfile`  `loginFormWrapper`
 
 ### 커스텀 훅
 
