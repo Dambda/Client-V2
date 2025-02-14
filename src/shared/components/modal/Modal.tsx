@@ -24,14 +24,18 @@ export function Modal({
     if (modalConfig.open === false) return null;
 
     const handleOuterTouchClose = () => {
+        console.log('AA');
         if (modalConfig.outerTouchClose) {
             modalConfig.handleClose();
         }
     };
+    console.log(modalConfig);
     return (
         <div
             className={S.modal}
-            onClick={() => {}}
+            onClick={() => {
+                handleOuterTouchClose();
+            }}
             role="presentation"
             onKeyUp={() => {
                 handleOuterTouchClose();
@@ -41,8 +45,9 @@ export function Modal({
                 className={S.modalContent}
                 role="alertdialog"
                 aria-modal="true"
-                onClick={() => {}}
-                onKeyUp={(e) => e.stopPropagation()}
+                onClick={(e) => {
+                    e.stopPropagation();
+                }}
             >
                 {modalConfig.outerTouchClose && (
                     <button
