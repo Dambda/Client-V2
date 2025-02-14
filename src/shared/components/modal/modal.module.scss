@@ -6,7 +6,6 @@ $modal-content-height: 300px;
 $modal-index: 100;
 
 .modal {
-  display: block;
   background-color: $modal-background; // 모달 배경 투명도
   z-index: $modal-index; // 모달 z-index 1000
   position: fixed;
