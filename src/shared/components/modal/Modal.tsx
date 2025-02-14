@@ -45,9 +45,6 @@ export function Modal({
                 className={S.modalContent}
                 role="alertdialog"
                 aria-modal="true"
-                onClick={(e) => {
-                    e.stopPropagation();
-                }}
             >
                 {modalConfig.outerTouchClose && (
                     <button
@@ -57,7 +54,6 @@ export function Modal({
                             height: `${modalConfig.btnSize}px`,
                         }}
                         onClick={() => modalConfig.handleClose()}
-                        role="button"
                     >
                         close
                     </button>
