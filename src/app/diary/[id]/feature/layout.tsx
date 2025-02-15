@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import S from './DiaryFeature.module.scss';
 
 export default function Layout({
     children,
@@ -8,7 +9,7 @@ export default function Layout({
     panel: ReactNode;
 }) {
     return (
-        <div>
+        <div className={S.container}>
             {/* feature 모드의 일기 컴포넌트 */}
             {children}
 
