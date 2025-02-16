@@ -7,8 +7,9 @@ interface IReadMindProps {
 }
 
 export default function ReadMind({ response }: IReadMindProps) {
+    console.log(response);
     return (
-        <div className={S.minCotainer}>
+        <div className={`${S.mainContainer} ${S[response.mood]}`}>
             <div className={S.topContainer}>
                 <h3 className={S.topTitle}>마음 읽기</h3>
                 <span className={S.topContent}>
@@ -23,12 +24,12 @@ export default function ReadMind({ response }: IReadMindProps) {
                 </h3>
                 <div className={S.midBox}>
                     <div>감정들</div>
-                    <div className={S.imgBox}>
+                    <div className={`${S.imgBox} ${S[response.mood]}`}>
                         <Image
                             alt="d"
-                            src="/캐릭터.svg"
-                            width={200}
-                            height={200}
+                            src={`/character/${response.mood}.svg`}
+                            width={130}
+                            height={response.mood === 'calm' ? 180 : 130}
                         />
                     </div>
                 </div>
