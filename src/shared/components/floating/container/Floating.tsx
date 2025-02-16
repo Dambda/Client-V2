@@ -13,7 +13,10 @@ export default function Floating({ menus }: { menus: string[] }) {
 
     return (
         <div ref={floatingRef} className={S.container}>
+            {/* 플로팅 메뉴 */}
             <FloatingBody {...config} menus={menus} />
+
+            {/* 플로팅 트리거 버튼 */}
             <FloatingTrigger
                 isOpen={config.isOpen}
                 onClick={config.toggleFloating}

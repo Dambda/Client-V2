@@ -16,7 +16,7 @@ import TriggerIcon from '@public/icons/common/plus.svg';
 
 export default function FloatingTrigger({ isOpen, onClick }: IFloatingTrigger) {
     return (
-        // 버튼 전체를 감싸는 컨테이너, 클릭 시 onClick 핸들러 호출
+        // 버튼 전체를 감싸는 컨테이너, 클릭 시 onClick 핸들러 호출하여 플로팅 메뉴 토글
         <button
             onClick={onClick}
             className={classNames(S.container, { [S.isOpen]: isOpen })}
