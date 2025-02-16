@@ -21,5 +21,12 @@ export const useFloatingToggle = () => {
         setIsOpen((prev) => !prev);
     };
 
-    return { isOpen, parentRef, childRef, toggleFloating };
+    const config = {
+        isOpen,
+        setIsOpen,
+        parentRef,
+        childRef,
+        toggleFloating,
+    };
+    return config;
 };
