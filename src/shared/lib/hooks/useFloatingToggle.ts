@@ -9,16 +9,19 @@ export const useFloatingToggle = () => {
         e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
     ) => {
         e.preventDefault();
-        // 열려있는 상태면 닫기
-        if (parentRef.current!.clientHeight > 0) {
-            parentRef.current!.style.height = '0';
-        }
-        // 닫혀있는 상태면 열기
-        else {
-            parentRef.current!.style.height = `${childRef.current!.clientHeight}px`;
-        }
 
-        setIsOpen((prev) => !prev);
+        setIsOpen((prev) => {
+            const newIsOpen = !prev;
+
+            // 상태 업데이트 후 높이 설정
+            if (newIsOpen) {
+                parentRef.current!.style.height = `${childRef.current!.clientHeight}px`;
+            } else {
+                parentRef.current!.style.height = '0';
+            }
+
+            return newIsOpen;
+        });
     };
 
     const config = {
