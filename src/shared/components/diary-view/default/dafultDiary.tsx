@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
-import s from './diary-view.module.scss';
+import S from './diary-view.module.scss';
 
 interface IDefaultDiaryProps {
     mode: string;
@@ -17,18 +17,18 @@ export default function DefaultDiary({
     contentImg,
 }: IDefaultDiaryProps) {
     return (
-        <div className={`${s.container} ${s[mode]}`}>
-            <h3 className={s.title}>{title}</h3>
-            <div className={s.hrContainer}>
-                <hr className={s.leftHr} />
+        <div className={`${S.container} ${S[mode]}`}>
+            <h3 className={S.title}>{title}</h3>
+            <div className={S.hrContainer}>
+                <hr className={S.leftHr} />
                 <span>{date}</span>
-                <hr className={s.rightHr} />
+                <hr className={S.rightHr} />
             </div>
-            <div className={s.contentContainer}>
-                <span className={s.content}>{content}</span>
+            <div className={S.contentContainer}>
+                <span className={S.content}>{content}</span>
                 {contentImg && (
                     <Image
-                        className={s.image}
+                        className={S.image}
                         src={contentImg}
                         alt="내용사진"
                         width={500}
@@ -36,9 +36,9 @@ export default function DefaultDiary({
                     />
                 )}
             </div>
-            <div className={s.bottomSection}>
-                <hr className={s.bottomHr} />
-                <div className={s.bottomContainer}>
+            <div className={S.bottomSection}>
+                <hr className={S.bottomHr} />
+                <div className={S.bottomContainer}>
                     <span>{date}</span>
                 </div>
             </div>

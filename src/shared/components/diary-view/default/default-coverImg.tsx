@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
-import s from './defaultCoverImg.module.scss';
+import S from './defaultCoverImg.module.scss';
 
 interface IDefaultCoverImgProps {
     mode: string;
@@ -17,21 +17,21 @@ export default function DefaultCoverImg({
     content,
 }: IDefaultCoverImgProps) {
     return (
-        <div className={`${s.container} ${s[mode]}`}>
-            <div className={`${s.coverSection} ${s[mode]}`}>
-                <Image className={s.img} src={coverImg} alt="커버" />
-                <div className={s.overlay}>
-                    <h3 className={s.title}>{title}</h3>
-                    <span className={s.date}>{date}</span>
+        <div className={`${S.container} ${S[mode]}`}>
+            <div className={`${S.coverSection} ${S[mode]}`}>
+                <Image className={S.img} src={coverImg} alt="커버" />
+                <div className={S.overlay}>
+                    <h3 className={S.title}>{title}</h3>
+                    <span className={S.date}>{date}</span>
                 </div>
             </div>
-            <div className={s.bottom}>
-                <div className={s.contentSection}>
+            <div className={S.bottom}>
+                <div className={S.contentSection}>
                     <span>{content}</span>
                 </div>
-                <div className={s.bottomSection}>
-                    <hr className={s.bottomHr} />
-                    <div className={s.bottomContainer}>
+                <div className={S.bottomSection}>
+                    <hr className={S.bottomHr} />
+                    <div className={S.bottomContainer}>
                         <span>{date}</span>
                     </div>
                 </div>

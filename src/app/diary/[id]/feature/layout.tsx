@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import S from './DiaryFeature.module.scss';
+import { diaryViewMock } from '@/shared/mocks/diary/diaryViewMock';
 import DiaryView from '@/shared/components/diary-view/DiaryView';
-import { diaryViewMock } from '@/shared/mocks/DiaryViewMock';
 
 export default function Layout({ children }: { children: ReactNode }) {
     const diaryMock = diaryViewMock; // diary의 정보를 받아오는 api 호출
