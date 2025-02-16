@@ -53,6 +53,7 @@ export default function FloatingBody({
                 ref={childRef}
                 className={classNames(S.child, { [S.childIsOpen]: isOpen })}
             >
+                {/* 메뉴 버튼 렌더링 */}
                 {filteredMenus.map((menu) => (
                     <button
                         key={menu.name}
