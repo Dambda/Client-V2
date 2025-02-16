@@ -12,6 +12,7 @@
 }
 
 .iconWrapper {
+    @include flex(center, center);
     transition: transform 0.4s;
 }
 
