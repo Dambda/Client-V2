@@ -1,4 +1,4 @@
-import { DiaryViewMockData } from '../types/diary.types';
+import { DiaryViewMockData } from '@/shared/types/diary.types';
 
 export const diaryViewMock: DiaryViewMockData = {
     id: 1,
