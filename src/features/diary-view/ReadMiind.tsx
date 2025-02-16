@@ -1,7 +1,12 @@
 import Image from 'next/image';
 import S from './ReadMind.module.scss';
+import { IEmotionAnalysis } from '@/app/diary/[id]/feature/mind/page';
 
-export default function ReadMind() {
+interface IReadMindProps {
+    response: IEmotionAnalysis; // response를 객체의 프로퍼티로 정의
+}
+
+export default function ReadMind({ response }: IReadMindProps) {
     return (
         <div className={S.minCotainer}>
             <div className={S.topContainer}>
@@ -30,11 +35,7 @@ export default function ReadMind() {
             </div>
             <div className={S.bottomContainer}>
                 <h3 className={S.bottomTitle}>당신을 위한 한마디</h3>
-                <span className={S.bottomContent}>
-                    가을의 찬 바람과 물든 나무들 속에서 느낀 평온함처럼, 바쁜
-                    하루 중에도 잠시 멈춰 마음을 쉬게 해주는 순간을 소중히
-                    간직하세요.
-                </span>
+                <span className={S.bottomContent}>{response.comment}</span>
             </div>
             <div className={S.ment}>
                 <span>지금 당신에게 필요한 순간은...</span>
