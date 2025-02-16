@@ -1,20 +1,17 @@
 import { ReactNode } from 'react';
 import S from './DiaryFeature.module.scss';
+import DiaryView from '@/shared/components/diary-view/DiaryView';
+import { diaryViewMock } from '@/shared/mocks/DiaryViewMock';
 
-export default function Layout({
-    children,
-    panel,
-}: {
-    children: ReactNode;
-    panel: ReactNode;
-}) {
+export default function Layout({ children }: { children: ReactNode }) {
+    const diaryMock = diaryViewMock;
     return (
         <div className={S.container}>
             {/* feature 모드의 일기 컴포넌트 */}
-            {children}
+            <DiaryView mode="feature" {...diaryMock} />
 
             {/* 사이드 패널 ex. 덧말, 마음읽기 */}
-            {panel}
+            {children}
         </div>
     );
 }
