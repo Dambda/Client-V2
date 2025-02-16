@@ -3,7 +3,7 @@ import S from './ReadMind.module.scss';
 
 export default function ReadMind() {
     return (
-        <div>
+        <div className={S.minCotainer}>
             <div className={S.topContainer}>
                 <h3 className={S.topTitle}>마음 읽기</h3>
                 <span className={S.topContent}>
@@ -17,14 +17,27 @@ export default function ReadMind() {
                     마음에 머물렀던 감정을 떠올려볼까요?
                 </h3>
                 <div className={S.midBox}>
-                    <div></div>
-                    <Image alt="d" src="/캐릭터.svg" width={200} height={200} />
-                    <div></div>
+                    <div>감정들</div>
+                    <div className={S.imgBox}>
+                        <Image
+                            alt="d"
+                            src="/캐릭터.svg"
+                            width={200}
+                            height={200}
+                        />
+                    </div>
                 </div>
             </div>
-            <div>
-                <h3>당신을 위한 한마디</h3>
-                <span>어쩌구</span>
+            <div className={S.bottomContainer}>
+                <h3 className={S.bottomTitle}>당신을 위한 한마디</h3>
+                <span className={S.bottomContent}>
+                    가을의 찬 바람과 물든 나무들 속에서 느낀 평온함처럼, 바쁜
+                    하루 중에도 잠시 멈춰 마음을 쉬게 해주는 순간을 소중히
+                    간직하세요.
+                </span>
+            </div>
+            <div className={S.ment}>
+                <span>지금 당신에게 필요한 순간은...</span>
             </div>
         </div>
     );

@@ -29,5 +29,31 @@
         min-height: 200px;
         display: flex;
         justify-content: space-between;
+        .imgBox {
+            padding: 30px;
+        }
     }
+}
+
+.bottomContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 28px;
+    .bottomTitle {
+        @include noto(400, 20px, 1.5);
+        color: #999999;
+    }
+    .bottomContent {
+        color: #999999;
+        min-height: 130px;
+        @include noto(300, 16px, 1.7);
+    }
+}
+
+.ment {
+    display: flex;
+    justify-content: flex-end;
+    @include noto(400, 14px, 1.5);
+    color: #bfbfbf;
 }
