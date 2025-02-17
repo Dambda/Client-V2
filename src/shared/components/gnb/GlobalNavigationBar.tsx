@@ -1,10 +1,10 @@
-import Link from "next/link";
-import s from "./gnb.module.scss";
+import Link from 'next/link';
+import S from './Gnb.module.scss';
 
 export default function GlobalNavigationBar() {
-  return (
-    <header className={s.test}>
-      <Link href="/">GlobalNavigationBar</Link>
-    </header>
-  );
+    return (
+        <header className={S.test}>
+            <Link href="/">GlobalNavigationBar</Link>
+        </header>
+    );
 }

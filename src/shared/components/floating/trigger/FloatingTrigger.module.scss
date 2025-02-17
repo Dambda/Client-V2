@@ -1,0 +1,21 @@
+.container {
+    @include flex(center, center);
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: $primary;
+    cursor: pointer;
+}
+
+.isOpen {
+    background-color: $accent;
+}
+
+.iconWrapper {
+    @include flex(center, center);
+    transition: transform 0.4s;
+}
+
+.rotating {
+    transform: rotate(45deg);
+}
