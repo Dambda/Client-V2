@@ -1,7 +1,6 @@
 $modal-radius: 8px;
 $modal-background: rgba(0, 0, 0, 0.2);
-$modal-cotnent-background: rgba(255, 255, 255, 1);
-$modal-content-width: 450px;
+$modal-content-width: 350px;
 $modal-content-height: 300px;
 $modal-index: 100;
 
@@ -22,7 +21,7 @@ $modal-index: 100;
   align-items: center;
 
   .modalContent {
-    background-color: $modal-cotnent-background; // 모달 내용 배경색
+    background-color: $background; // 모달 내용 배경색
     min-width: $modal-content-width; // 모달 내용 최소 너비
 
     border: none;
@@ -30,8 +29,6 @@ $modal-index: 100;
     position: relative;
     display: flex;
     flex-direction: column;
-
-    padding: 24px;
   }
   .closeBtn {
     position: absolute;

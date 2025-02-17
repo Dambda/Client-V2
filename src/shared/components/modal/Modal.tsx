@@ -4,8 +4,8 @@ import { ModalProps } from '@/shared/types/useModal.types';
 import S from './modal.module.scss';
 /**
  * 공용 모달 컴포넌트
- * @param children 모달 내부에 들어갈 컨텐츠
- * @parms modalConfig 모달 설정
+ * @param {ReactNode} children 모달 내부에 들어갈 컨텐츠 (optional)
+ * @parms modalConfig 모달 설정 - useModal에서 반환된 modalConfig
  * @returns 닫기 버튼이 존재하지 않는 모달
  * @example
  * const { modalConfig, toggleModal } = useModal({ open: true });
@@ -24,12 +24,11 @@ export function Modal({
     if (modalConfig.open === false) return null;
 
     const handleOuterTouchClose = () => {
-        console.log('AA');
         if (modalConfig.outerTouchClose) {
             modalConfig.handleClose();
         }
     };
-    console.log(modalConfig);
+
     return (
         <div
             className={S.modal}
@@ -38,9 +37,8 @@ export function Modal({
             }}
             role="presentation"
         >
-            <div
+            <dialog
                 className={S.modalContent}
-                role="presentation"
                 onClick={(e) => e.stopPropagation()}
             >
                 {modalConfig.outerTouchClose && (
@@ -56,7 +54,7 @@ export function Modal({
                     </button>
                 )}
                 {children}
-            </div>
+            </dialog>
         </div>
     );
 }

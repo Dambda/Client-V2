@@ -12,16 +12,16 @@ const defaultModalConfig: IModalConfig = {
 };
 /**
  * 동적 모달 관리를 위한 커스텀 훅
- * @param config 모달 기본 설정을 할 수 있는 객체(선택)
- * - open: 모달이 열려있는지 여부(기본값: false)
- * - showCloseButton: 모달 내부 버튼 유무(기본값: true)
- * - btnSize: 모달 내부 버튼 크기(기본값: 24
- * @returns 모달 설정을 변경할 수 있는 함수
- * - toggleModal: 모달을 열거나 닫는 함수
- * - showModal: 모달을 열어주는 함수
- * - hideModal: 모달을 닫아주는 함수
- * - updateModalConfig: 모달 설정을 업데이트하는 함수
- * - modalConfig: 모달 설정
+ * @param {IExtendedModalConfig} config 모달 기본 설정을 할 수 있는 객체(optional)
+ * - [open=false]: 모달이 열려있는지 여부
+ * - [showCloseButton=true]: 모달 내부 버튼 유무
+ * - [btnSize=24]: 모달 내부 버튼 크기 (24, 32 only)
+ * @returns 모달 설정을 변경할 수 있는 객체
+ * - {void} toggleModal: 모달을 열거나 닫는 함수
+ * - {void} showModal: 모달을 열어주는 함수
+ * - {void} hideModal: 모달을 닫아주는 함수
+ * - {void} updateModalConfig: 모달 설정을 업데이트하는 함수
+ * - {object} modalConfig: 모달 설정 - 세부 타입 IModalConfig 참고
  */
 const useModal = (config?: IModalConfig): IModalReturn => {
     const [modalConfig, setModalConfig] = useState<IModalConfig>({
