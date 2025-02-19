@@ -1,10 +1,12 @@
 import S from './DefaultHeader.module.scss';
 
 interface IHeaderDefaultProps {
-    title: string;
+    readonly title: string;
 }
 
-export default function HeaderDeafult({ title }: IHeaderDefaultProps) {
+export default function HeaderDeafult({
+    title,
+}: Readonly<IHeaderDefaultProps>) {
     return (
         <div className={S.container}>
             <h3 className={S.title}>{title}</h3>

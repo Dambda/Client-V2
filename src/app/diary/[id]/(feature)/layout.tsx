@@ -3,7 +3,11 @@ import S from './DiaryFeature.module.scss';
 import { diaryViewMock } from '@/shared/mocks/diary/diaryViewMock';
 import DiaryView from '@/shared/components/diary-view/DiaryView';
 
-export default function Layout({ children }: { children: ReactNode }) {
+interface ILayoutProps {
+    readonly children: ReactNode;
+}
+
+export default function Layout({ children }: Readonly<ILayoutProps>) {
     const diaryMock = diaryViewMock; // diary의 정보를 받아오는 api 호출
     return (
         <div className={S.container}>

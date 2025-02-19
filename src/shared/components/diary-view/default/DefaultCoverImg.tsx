@@ -2,11 +2,11 @@ import Image, { StaticImageData } from 'next/image';
 import S from './DefaultCoverImg.module.scss';
 
 interface IDefaultCoverImgProps {
-    mode: string;
-    coverImg: string | StaticImageData;
-    title: string;
-    date: string;
-    content: string;
+    readonly mode: string;
+    readonly coverImg: string | StaticImageData;
+    readonly title: string;
+    readonly date: string;
+    readonly content: string;
 }
 
 export default function DefaultCoverImg({
@@ -15,7 +15,7 @@ export default function DefaultCoverImg({
     title,
     date,
     content,
-}: IDefaultCoverImgProps) {
+}: Readonly<IDefaultCoverImgProps>) {
     return (
         <div className={`${S.container} ${S[mode]}`}>
             <div className={`${S.coverSection} ${S[mode]}`}>

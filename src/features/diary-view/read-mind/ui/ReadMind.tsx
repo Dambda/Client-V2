@@ -1,12 +1,12 @@
 import Image from 'next/image';
 import S from './ReadMind.module.scss';
-import { IEmotionAnalysis } from '@/app/diary/[id]/feature/mind/page';
+import { IemotionAnalysis } from '@/shared/types/diary.types';
 
 interface IReadMindProps {
-    response: IEmotionAnalysis; // response를 객체의 프로퍼티로 정의
+    readonly response: IemotionAnalysis; // response를 객체의 프로퍼티로 정의
 }
 
-export default function ReadMind({ response }: IReadMindProps) {
+export default function ReadMind({ response }: Readonly<IReadMindProps>) {
     return (
         <div className={`${S.mainContainer} ${S[response.mood]}`}>
             <div className={S.topContainer}>

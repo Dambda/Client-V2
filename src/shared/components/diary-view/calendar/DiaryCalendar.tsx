@@ -4,10 +4,10 @@ import HeaderCover from './header/HeaderCover';
 import HeaderDeafult from './header/HeaderDefault';
 
 interface IDiaryCalendarProps {
-    title: string;
-    content: string;
-    coverImg?: string | StaticImageData;
-    contentImg?: string | StaticImageData;
+    readonly title: string;
+    readonly content: string;
+    readonly coverImg?: string | StaticImageData;
+    readonly contentImg?: string | StaticImageData;
 }
 
 export default function DiaryCalendar({
@@ -15,7 +15,7 @@ export default function DiaryCalendar({
     content,
     contentImg,
     coverImg,
-}: IDiaryCalendarProps) {
+}: Readonly<IDiaryCalendarProps>) {
     return (
         // calendier 컴포넌트에서는 내용 부분은 그대로 가져가고 헤더 부분을 coverImg의 여부로 분기하여 호출
         <div className={S.container}>
