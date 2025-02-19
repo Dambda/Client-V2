@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
-import S from './diary-view.module.scss';
+import S from './DiaryView.module.scss';
 
 interface IDefaultDiaryProps {
     mode: string;

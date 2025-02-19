@@ -7,7 +7,6 @@ interface IReadMindProps {
 }
 
 export default function ReadMind({ response }: IReadMindProps) {
-    console.log(response);
     return (
         <div className={`${S.mainContainer} ${S[response.mood]}`}>
             <div className={S.topContainer}>

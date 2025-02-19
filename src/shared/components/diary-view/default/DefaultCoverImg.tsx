@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
-import S from './defaultCoverImg.module.scss';
+import S from './DefaultCoverImg.module.scss';
 
 interface IDefaultCoverImgProps {
     mode: string;

@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
-import s from './cover-header.module.scss';
+import S from './CoverHeader.module.scss';
 
 interface IHeaderCoverProps {
     coverImg: string | StaticImageData;
@@ -8,10 +8,10 @@ interface IHeaderCoverProps {
 
 export default function HeaderCover({ coverImg, title }: IHeaderCoverProps) {
     return (
-        <div className={s.coverSection}>
-            <div className={s.overlay}>
+        <div className={S.coverSection}>
+            <div className={S.overlay}>
                 <Image src={coverImg} alt="커버이미지"></Image>
-                <span className={s.title}>{title}</span>
+                <span className={S.title}>{title}</span>
             </div>
         </div>
     );
