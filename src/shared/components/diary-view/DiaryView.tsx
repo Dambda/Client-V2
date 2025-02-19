@@ -1,7 +1,7 @@
 import { StaticImageData } from 'next/image';
+import DiaryCalendar from './calendar/diary-calendar';
 import DefaultCoverImg from './default/default-coverImg';
 import DefaultDiary from './default/dafultDiary';
-import DiaryCalendar from './calendar/diary-calendar';
 
 // 캘린더 페이지에서 볼 때 사용하는, 덧말 등의 기능을 할 때 사용하는, default로 컴포넌트의 Mode 타입 선언
 export type DiaryViewMode = 'calendar' | 'feature' | 'default';
