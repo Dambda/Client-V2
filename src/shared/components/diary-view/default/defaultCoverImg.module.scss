@@ -1,11 +1,12 @@
 .container {
-    min-height: 736px;
+    flex: 1;
+    min-height: 89.42vh;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
 
     &.default {
-        width: 1080px;
+        width: 94.37vw;
         border-top: {
             left-radius: 24px;
             right-radius: 24px;
@@ -22,7 +23,7 @@
 
     .coverSection {
         position: relative;
-        height: 240px;
+        height: 29.16vh;
         flex-shrink: 0;
         background-color: brown;
         overflow: hidden;
@@ -53,7 +54,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 80px 80px 35px;
+            padding: 6.25vw 6.25vw 4.25vh;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -79,14 +80,14 @@
         display: flex;
         flex-direction: column;
         padding: {
-            left: 80px;
-            right: 80px;
+            left: 6.25vw;
+            right: 6.25vw;
         }
 
         .contentSection {
             @include noto(300, 18px, 2);
             color: #333333;
-            margin-top: 35px;
+            margin-top: 4.25vh;
         }
 
         .bottomSection {
@@ -97,13 +98,13 @@
 
             .bottomHr {
                 height: 1px;
-                margin-top: 55px;
+                margin-top: 6.68vh;
                 background-color: #ececec;
                 border: none;
             }
 
             .bottomContainer {
-                min-height: 66px;
+                min-height: 8.019vh;
                 display: flex;
                 align-items: center;
                 @include noto(400, 12px, 1.5);

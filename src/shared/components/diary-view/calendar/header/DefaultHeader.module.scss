@@ -1,15 +1,15 @@
 .container {
-    padding-top: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-top: 3.64vh;
+    padding-left: 2.41vw;
+    padding-right: 2.41vw;
     .title {
         @include noto(300, 28px, 1.5);
-        margin-bottom: 30px;
+        margin-bottom: 3.64vh;
     }
     .hr {
         height: 1px;
         background-color: #dfdfdf;
         border: none;
     }
-    margin-bottom: 30px;
+    margin-bottom: 3.64vh;
 }

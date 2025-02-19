@@ -1,27 +1,27 @@
 .container {
-    width: 470px;
-    min-height: 670px;
+    width: 37.9vw;
+    min-height: 81.4vh;
     background-color: #f9f7f6;
     border-top-left-radius: 24px;
     border: 1px solid #ececec;
     display: flex;
     flex-direction: column;
     .contentContainer {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 2.41vw;
+        padding-right: 2.41vw;
         .content {
             display: inline-block;
             @include noto(300, 16px, 2);
-            margin-bottom: 20px;
+            margin-bottom: 2.43vh;
         }
     }
     .hrContainer {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 2.41vw;
+        padding-right: 2.41vw;
         margin-top: auto;
         .hr {
-            margin-top: 55px;
-            margin-bottom: 40px;
+            margin-top: 6.68vh;
+            margin-bottom: 4.86vh;
             height: 1px;
             border: none;
             background-color: #dfdfdf;

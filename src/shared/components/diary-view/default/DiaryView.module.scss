@@ -1,16 +1,17 @@
 .container {
-    min-height: 736px;
+    flex: 1;
+    min-height: 89.4vh;
     background-color: #ffffff;
     padding: {
-        top: 35px;
-        left: 80px;
-        right: 80px;
+        top: 4.25vh;
+        left: 6.25vw;
+        right: 6.25vw;
     }
     display: flex;
     flex-direction: column;
 
     &.default {
-        width: 1080px;
+        width: 84.375vw;
         border-top: {
             left-radius: 24px;
             right-radius: 24px;
@@ -18,7 +19,7 @@
     }
 
     &.feature {
-        width: 800px;
+        width: 62.5vw;
         border-top: {
             left-radius: 0px;
             right-radius: 24px;
@@ -31,8 +32,8 @@
 
     .hrContainer {
         margin: {
-            top: 35px;
-            bottom: 35px;
+            top: 4.25vh;
+            bottom: 4.25vh;
         }
         display: flex;
         align-items: center;
@@ -52,7 +53,7 @@
         }
 
         .rightHr {
-            width: 50px;
+            width: 3.906vw;
         }
     }
 
@@ -63,12 +64,12 @@
         .content {
             @include noto(300, 18px, 2);
             color: #333333;
-            margin-bottom: 20px;
+            margin-bottom: 2.43vh;
         }
 
         .image {
-            width: 543px;
-            height: 240px;
+            width: 42.42vw;
+            height: 29.16vh;
             border-radius: 8px;
             background-color: brown;
         }
@@ -82,13 +83,13 @@
 
         .bottomHr {
             height: 1px;
-            margin-top: 55px;
+            margin-top: 6.68vh;
             background-color: #ececec;
             border: none;
         }
 
         .bottomContainer {
-            min-height: 66px;
+            min-height: 8.02vh;
             display: flex;
             align-items: center;
             @include noto(400, 12px, 1.5);
