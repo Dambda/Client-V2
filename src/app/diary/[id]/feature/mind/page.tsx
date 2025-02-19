@@ -1,4 +1,4 @@
-import ReadMind from '@/features/diary-view/ReadMind';
+import ReadMind from '@/features/diary-view/read-mind/ui/ReadMind';
 import { emotionAnalysis } from '@/shared/mocks/diary/emotionAnalysis';
 
 type MoodType = 'joy' | 'sad' | 'rage' | 'anxiety' | 'calm';
