@@ -1,0 +1,95 @@
+.mainContainer {
+    width: 450px;
+    min-height: 89.42vh;
+    padding-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    border-top-left-radius: 24px;
+    &.joy {
+        background-color: rgba(253, 246, 225, 0.55);
+    }
+    &.sad {
+        background-color: rgba(177, 210, 224, 0.15);
+    }
+    &.rage {
+        background-color: rgba(248, 235, 233, 0.7);
+    }
+    &.anxiety {
+        background-color: rgba(228, 215, 247, 0.25);
+    }
+    &.calm {
+        background-color: rgba(211, 220, 187, 0.2);
+    }
+    .topContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .topTitle {
+            @include arita(500, 24px, 1.5);
+        }
+        .topContent {
+            color: #bfbfbf;
+            @include noto(300, 16px, 1.7);
+        }
+        .hr {
+            height: 1px;
+            border: none;
+            background-image: linear-gradient(
+                to right,
+                #bfbfbf 0%,
+                #f9f7f6 100%
+            );
+        }
+        margin-bottom: 25px;
+    }
+
+    .midContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        .midTitle {
+            @include noto(400, 20px, 1.5);
+            color: #999999;
+        }
+        .midBox {
+            min-height: 200px;
+            display: flex;
+            justify-content: space-between;
+            .imgBox {
+                height: 200px;
+                width: 200px;
+                padding: 30px;
+                &.calm {
+                    padding-left: 35px;
+                    padding-right: 35px;
+                    padding-top: 9px;
+                    padding-bottom: 9px;
+                }
+            }
+        }
+    }
+
+    .bottomContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 28px;
+        .bottomTitle {
+            @include noto(400, 20px, 1.5);
+            color: #999999;
+        }
+        .bottomContent {
+            color: #999999;
+            min-height: 130px;
+            @include noto(300, 16px, 1.7);
+        }
+    }
+
+    .ment {
+        display: flex;
+        justify-content: flex-end;
+        @include noto(400, 14px, 1.5);
+        color: #bfbfbf;
+    }
+}

@@ -1,11 +1,17 @@
-import { DiaryViewMode } from '../components/diary-view/DiaryView';
-
 export interface DiaryViewMockData {
     id: number;
-    mode: DiaryViewMode;
     title: string;
     content: string;
     date: string;
     contentImg?: string;
     coverImg?: string;
+}
+
+export type MoodType = 'joy' | 'sad' | 'rage' | 'anxiety' | 'calm';
+
+export interface IemotionAnalysis {
+    id: string;
+    mood: MoodType;
+    emotionKeyword: string[];
+    comment: string;
 }
